@@ -5,7 +5,6 @@ const jwtwebtoken = require('jsonwebtoken')
 
 const authController = {
   signup: async (req, res, next) => {
-    console.log(req)
     try {
       // Je récupère le nouvel utilisateur
       let { first_name, last_name, email, password } = req.body
@@ -47,6 +46,7 @@ const authController = {
   },
 
   login: async (req, res, next) => {
+
     try {
       const { email, password } = req.body
       // On récupère le user

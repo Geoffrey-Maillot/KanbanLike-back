@@ -1,12 +1,17 @@
 
-const { Sequelize } = require('sequelize');
+/*const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialectOptions: {
         ssl: {
             require: true,
             rejectUnauthorized: false
-        }
+        },
+        define: {
+            timestamps: false,
+            createdAt: 'created_at',
+            updatedAt: 'updated_at'
+        },
     }
 }
 );
@@ -20,5 +25,21 @@ sequelize
         console.error('Unable to connect to the database:', err);
     });
 
+
+module.exports = sequelize;
+*/
+const { Sequelize } = require('sequelize');
+
+const sequelize = new Sequelize(
+    process.env.DATABASE_URL,
+    {
+        define: {
+            timestamps: false,
+            createdAt: 'created_at',
+            updatedAt: 'updated_at'
+        },
+        logging: false
+    }
+);
 
 module.exports = sequelize;
