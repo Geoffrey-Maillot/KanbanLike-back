@@ -1,0 +1,5 @@
+%syntax-version=1.0.0
+%project=kanbanlike
+%uri=https://github.com/Geoffrey-Maillot/migrations_kanbanlike
+
+01-base-tables 2021-05-17T08:52:24Z geoffrey-maillot <geoffrey.maillot@gmail.com> # Schema de base de la BDD kanbanlike

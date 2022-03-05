@@ -1,0 +1,11 @@
+POSSEDE, 11 LIST, 0N USER
+LIST: name, position
+APPARTIENT A, 11 CARD, 0N LIST
+
+USER: first name, last name, email, password
+:
+CARD: name, position, status
+
+:
+LABEL: name, color
+ETIQUETTE, 0N CARD, 0N LABEL

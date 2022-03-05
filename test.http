@@ -1,0 +1,134 @@
+#
+        # AUTH
+#
+
+### /signup
+POST http://localhost:3020/signup
+Content-Type: application/json
+
+{
+    "first_name": "toto",
+    "last_name": "tata",
+     "email": "ttefft.uggjc@gmail.com",
+    "password": "08468534"
+}
+
+### login
+POST http://localhost:3020/login
+Content-Type: application/json
+
+{
+     "email": "geoffrey.maillot@gmail.com",
+    "password": "08468534"
+}
+
+#
+        # LIST
+#
+
+### /list
+GET http://localhost:3020/list/12
+Content-Type: application/json
+
+### /list
+POST http://localhost:3020/list
+Content-Type: application/json
+
+{
+    "name": "test list",
+    "position": "52",
+    "user_id": "12" 
+}
+
+### /list/:id
+PATCH  http://localhost:3020/list/2
+Content-Type: application/json
+
+{
+    "name": "Updater la liste "
+}
+### /list/:id
+PATCH  http://localhost:3020/list/5
+Content-Type: application/json
+
+{
+    "position": 8
+}
+
+### /list/:id
+DELETE http://localhost:3020/list/3653
+Content-Type: application/json
+
+{
+    "userId": 12
+}
+
+#
+        # CARD
+#
+
+### /card
+POST http://localhost:3020/card
+Content-Type: application/json
+
+{
+    "name": "Encore",
+    "position": "4",
+    "list_id": "1" 
+}
+
+### /card/:id
+PATCH http://localhost:3020/card/11
+Content-Type: application/json
+
+{
+    "name": "maj carte",
+    "status": "in progress",
+    "position": 3
+}
+
+### /card/:id
+DELETE http://localhost:3020/card/65
+Content-Type: application/json
+
+{
+    "userId": 12
+}
+#
+        # LABEL
+#
+
+### /label
+GET http://localhost:3020/label
+Content-Type: application/json
+
+### /label
+POST http://localhost:3020/label
+Content-Type: application/json
+
+{
+    "name": "Nouveau super label",
+    "color": "pink"
+}
+
+### /label/:id
+PATCH http://localhost:3020/label/6
+Content-Type: application/json
+
+{
+    "name": "maj label",
+    "color": "black"
+}
+
+### /label/:id
+DELETE http://localhost:3020/label/4
+Content-Type: application/json
+
+
+### /card/:cardId/label/:labelId
+POST http://localhost:3020/card/11/label/1
+Content-Type: application/json
+
+### /card/:cardId/label/:labelId
+DELETE http://localhost:3020/card/11/label/1
+Content-Type: application/json

@@ -1,0 +1,5 @@
+user(id, first_name, last_name, email, password)
+list(id, name, position, #user(id))
+card(id, name, position, status, #list(id))
+label(name, color)
+card_has_label(id, #card(id), #label(id))
