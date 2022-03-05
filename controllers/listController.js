@@ -24,7 +24,6 @@ const listController = {
 
       res.status(200).json({ lists })
     } catch (error) {
-      console.log(error)
       next(error)
     }
   },
