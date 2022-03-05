@@ -8,7 +8,7 @@ const app = express();
 
 // Je définie les CORS afin que seul mon app front puissent acceder à l'api
 app.use(cors({
-    origin: 'https://kanbanlike.netlify.app/'
+    origin: 'https://kanbanlike.netlify.app'
 }));
 
 // middleware qui sert à interpréter le body d'une requêtes
